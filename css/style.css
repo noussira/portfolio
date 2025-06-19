@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+:root {
+  --color-first: black;
+  --color-second: #c6ff4c;
+  --color-third: white;
+  --color-hover: #444;
+  --card-bg-color: #f5f5f5;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+.header_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--color-first);
+  height: 10vh;
+  color: var(--color-third);
+  padding: 0 2rem;
+}
+
+.header_container a {
+  color: var(--color-third);
+}
+
+.header_container .logo span {
+  color: var(--color-second);
+}
+
+.header_container .btn-download {
+  color: var(--color-second);
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: 1px solid var(--color-second);
+  transition: all 400ms ease;
+}
+
+.header_container .btn-download:hover {
+  background: var(--color-hover);
+  color: white;
+}
+
+.header_container .menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.header_container .menu a:hover {
+  color: var(--color-second);
+  border-bottom: 2px solid var(--color-second);
+  padding-bottom: 2px;
+}
+
+
+#Accueil {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: var(--card-bg-color);
+  text-align: left;
+}
+
+#Accueil .left,
+#Accueil .right {
+  flex: 1 1 45%;
+}
+
+
+.container_section:not(#Accueil) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: var(--card-bg-color);
+}
+
+
+.container_section:not(#Accueil)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-second);
+  margin-bottom: 2rem;
+}
+
+
+.container_section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-first);
+  text-align: center;
+}
+
+
+.image-ronde {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+}
+
+
+.grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+
+.skills {
+  padding-left: 1.5rem;
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.skills li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+.skill {
+  width: 100%;
+  max-width: 400px;
+  margin: 0.3rem auto; 
+}
+
+.skill p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-first);
+  margin: 0.2rem 0;  
+  line-height: 1.2;
+}
+
+.barre {
+  width: 100%;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.remplissage {
+  height: 100%;
+  background-color: var(--color-second);
+  border-radius: 10px 0 0 10px;
+  width: 0; 
+  transition: width 1.5s ease-in-out;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+form label {
+  text-align: left;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: var(--color-second);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: var(--color-hover);
+  color: white;
+}
+
+
+footer {
+  background: var(--color-first);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header_container {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .header_container .menu {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  #Accueil {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #Accueil .left,
+  #Accueil .right {
+    flex: 1 1 100%;
+  }
+
+  .skills {
+    text-align: center;
+    padding-left: 0;
+  }
+}
